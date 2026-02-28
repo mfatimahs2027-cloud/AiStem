@@ -1,0 +1,230 @@
+/* ------------------------------
+   LAYER 1 — GLOBAL BASE STYLES
+--------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #222222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff6600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button:hover,
+button:hover {
+  opacity: 0.85;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ------------------------------
+   LAYER 2 — HOME PAGE STYLES
+--------------------------------*/
+
+.hero-slider .slide {
+  background: #ddd;
+  padding: 120px 0;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-content .about-image,
+.about-content .about-text {
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+@media (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cta {
+  text-align: center;
+  background: #ff6600;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.cta .button {
+  background: #ffffff;
+  color: #ff6600;
+}
+
+/* ------------------------------
+   LAYER 3 — PAGE SPECIFIC STYLES
+--------------------------------*/
+
+/* ABOUT PAGE — ALTERNATING LAYOUT */
+.two-column {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.two-column .col {
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
+
+/* GALLERY PAGE — GRID + HOVER */
+.gallery-grid-section .gallery-grid img {
+  border-radius: 6px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid-section .gallery-grid img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* CONTACT PAGE — FORM LAYOUT */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
